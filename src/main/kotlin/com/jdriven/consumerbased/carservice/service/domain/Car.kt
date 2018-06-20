@@ -1,4 +1,4 @@
-package com.jdriven.consumerbased.cardservice.service.domain
+package com.jdriven.consumerbased.carservice.service.domain
 
 import java.time.LocalDate
 

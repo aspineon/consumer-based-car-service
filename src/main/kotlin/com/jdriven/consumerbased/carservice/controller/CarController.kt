@@ -1,8 +1,8 @@
-package com.jdriven.consumerbased.cardservice.controller
+package com.jdriven.consumerbased.carservice.controller
 
-import com.jdriven.consumerbased.cardservice.controller.dto.SearchResponse
-import com.jdriven.consumerbased.cardservice.service.SearchService
-import com.jdriven.consumerbased.cardservice.service.domain.CarSearch
+import com.jdriven.consumerbased.carservice.controller.dto.SearchResponse
+import com.jdriven.consumerbased.carservice.service.SearchService
+import com.jdriven.consumerbased.carservice.service.domain.CarSearch
 import org.springframework.web.bind.annotation.*
 
 

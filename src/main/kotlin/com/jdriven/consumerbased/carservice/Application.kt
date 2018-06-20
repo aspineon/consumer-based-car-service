@@ -1,4 +1,4 @@
-package com.jdriven.consumerbased.cardservice
+package com.jdriven.consumerbased.carservice
 
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication

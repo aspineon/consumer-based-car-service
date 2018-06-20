@@ -1,9 +1,9 @@
-package com.jdriven.consumerbased.cardservice.service
+package com.jdriven.consumerbased.carservice.service
 
-import com.jdriven.consumerbased.cardservice.service.domain.Car
-import com.jdriven.consumerbased.cardservice.service.domain.CarSearch
-import com.jdriven.consumerbased.cardservice.service.domain.Color
-import com.jdriven.consumerbased.cardservice.service.domain.Fuel
+import com.jdriven.consumerbased.carservice.service.domain.Car
+import com.jdriven.consumerbased.carservice.service.domain.CarSearch
+import com.jdriven.consumerbased.carservice.service.domain.Color
+import com.jdriven.consumerbased.carservice.service.domain.Fuel
 import org.springframework.stereotype.Service
 import java.time.LocalDate
 

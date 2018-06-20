@@ -1,4 +1,4 @@
-package com.jdriven.consumerbased.cardservice.service.domain
+package com.jdriven.consumerbased.carservice.service.domain
 
 data class CarSearch(val make: String?,
                      val model: String?,
