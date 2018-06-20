@@ -1,0 +1,9 @@
+description: Voorbeeld specificatie met yaml
+name: Onbekende auto
+request:
+  url: /car/search
+  method: GET
+  body: '{ make: "Onbekende auto" }'
+response:
+  status: 200
+  body: '{[]}'
