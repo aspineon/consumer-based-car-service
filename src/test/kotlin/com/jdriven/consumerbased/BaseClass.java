@@ -40,7 +40,7 @@ public abstract class BaseClass {
                 .thenReturn(
                         Arrays.asList(
                                 new Car(THE_BEST_CAR_BRAND, "1", 2017, 12, Color.BLACK, Fuel.GASOLINE, 0, LocalDate.now()),
-                                new Car(THE_SINGLE_BEST_CAR_BRAND, "1", 2017, 12, Color.BLACK, Fuel.GASOLINE, 0, LocalDate.now()))
+                                new Car(THE_SINGLE_BEST_CAR_BRAND, "1", 2017, 12, Color.BLACK, Fuel.DIESEL, 0, LocalDate.now()))
                 );
     }
 

@@ -15,7 +15,8 @@ Contract.make {
         }
         body ([
                 "cars": [
-                        "make": value(anyNonBlankString())
+                        "make": value(anyNonBlankString()),
+                        "fuel": regex("GASOLINE|DIESEL")
                 ]
         ])
     }
