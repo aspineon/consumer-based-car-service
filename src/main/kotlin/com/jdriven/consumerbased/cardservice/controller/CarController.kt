@@ -2,10 +2,8 @@ package com.jdriven.consumerbased.cardservice.controller
 
 import com.jdriven.consumerbased.cardservice.controller.dto.SearchResponse
 import com.jdriven.consumerbased.cardservice.service.SearchService
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.PostMapping
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
+import com.jdriven.consumerbased.cardservice.service.domain.CarSearch
+import org.springframework.web.bind.annotation.*
 
 
 @RestController
@@ -13,8 +11,8 @@ import org.springframework.web.bind.annotation.RestController
 class CarController(private val searchService: SearchService) {
 
     @GetMapping
-    fun all() = SearchResponse(searchService.search())
+    fun all() = SearchResponse(searchService.all())
 
     @PostMapping("/search")
-    fun search() = SearchResponse(searchService.search())
+    fun search(@RequestBody carSearch: CarSearch) = SearchResponse(searchService.search(carSearch))
 }
