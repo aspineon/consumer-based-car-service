@@ -13,8 +13,10 @@ Contract.make {
         headers {
             contentType applicationJson()
         }
-        body (
-                id: 1
-        )
+        body ([
+                "cars": [
+                        "make": "BMW"
+                ]
+        ])
     }
 }
