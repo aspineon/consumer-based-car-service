@@ -8,12 +8,12 @@ import org.springframework.stereotype.Service
 import java.time.LocalDate
 
 @Service
-class SearchService {
+open class SearchService {
     private val cars = listOf(
             Car("Peugeot", "308", 2014, 12, Color.BLACK, Fuel.DIESEL, 80000, LocalDate.of(2014, 12, 24))
     )
 
-    fun all() = cars
+    open fun all() = cars
     fun search(carSearch: CarSearch) = cars.filter { matches(it, carSearch) }
 
     private fun matches(car: Car, carSearch: CarSearch) : Boolean {
