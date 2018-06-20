@@ -16,8 +16,8 @@ Post body (see service/domain/CarSearch):
 
 ```json
 {
-	"kilometersMax":"80000"
-	"fuel": "DIESEL"
+  "kilometersMax":"80000",
+  "fuel": "DIESEL"
 }
 ```
 
