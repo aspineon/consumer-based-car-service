@@ -1,4 +1,4 @@
-package com.jdriven.contractbased;
+package com.jdriven.consumerbased;
 
 import com.jdriven.consumerbased.carservice.Application;
 import com.jdriven.consumerbased.carservice.controller.CarController;

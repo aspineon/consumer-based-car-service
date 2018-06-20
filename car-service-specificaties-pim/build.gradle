@@ -1,0 +1,55 @@
+buildscript {
+    ext {
+        springBootVersion = '2.0.1.RELEASE'
+        springCloudContractVersion = '2.0.0.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath "org.springframework.cloud:spring-cloud-contract-gradle-plugin:${springCloudContractVersion}"
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+//apply plugin: 'spring-cloud-contract'
+
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven { url "https://repo.spring.io/milestone" }
+}
+
+configurations {
+    providedRuntime
+}
+
+ext {
+    springCloudVersion = 'Finchley.M9'
+}
+
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter-web')
+
+    providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+    testCompile('org.springframework.cloud:spring-cloud-starter-contract-verifier')
+    //	Indien je onze gegenereerde stubs wilt gebruiken, gebruik de stubrunner
+    testCompile('org.springframework.cloud:spring-cloud-starter-contract-stub-runner')
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+        mavenBom "org.springframework.cloud:spring-cloud-contract-dependencies:${springCloudContractVersion}"
+    }
+}
+
+//contracts {
+//    baseClassForTests = 'nl.donna.pti.cs.vii.BaseTestClass'
+//}
