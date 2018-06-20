@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service
 @Service
 class SearchService {
     private val cars = listOf(
-            Car("Volkswagon", 1998, 100000)
+            Car("Volkswagen", 1998, 100000)
     )
 
     fun all() = cars
