@@ -15,7 +15,7 @@ Contract.make {
         }
         body ([
                 "cars": [
-                        "make": "BMW"
+                        "make": value(anyNonBlankString())
                 ]
         ])
     }

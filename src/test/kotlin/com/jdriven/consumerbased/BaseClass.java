@@ -23,6 +23,8 @@ import java.util.Arrays;
 public abstract class BaseClass {
 
     public static final String THE_BEST_CAR_BRAND = "BMW";
+    public static final String THE_SINGLE_BEST_CAR_BRAND = "Volkswagen";
+
     @Autowired
     CarController carController;
 
@@ -33,9 +35,13 @@ public abstract class BaseClass {
     public void setup() {
         RestAssuredMockMvc.standaloneSetup(carController);
 
+
         Mockito.when(searchService.all())
                 .thenReturn(
-                        Arrays.asList(new Car(THE_BEST_CAR_BRAND, "1", 2017, 12, Color.BLACK, Fuel.GASOLINE, 0, LocalDate.now())));
+                        Arrays.asList(
+                                new Car(THE_BEST_CAR_BRAND, "1", 2017, 12, Color.BLACK, Fuel.GASOLINE, 0, LocalDate.now()),
+                                new Car(THE_SINGLE_BEST_CAR_BRAND, "1", 2017, 12, Color.BLACK, Fuel.GASOLINE, 0, LocalDate.now()))
+                );
     }
 
 }
