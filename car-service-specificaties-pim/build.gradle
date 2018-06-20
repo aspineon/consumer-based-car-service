@@ -39,7 +39,8 @@ dependencies {
     providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
     testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile('org.springframework.cloud:spring-cloud-starter-contract-verifier')
-//	Indien je onze gegenereerde stubs wilt gebruiken, gebruik testCompile('org.springframework.cloud:spring-cloud-starter-contract-stub-runner')
+    //	Indien je onze gegenereerde stubs wilt gebruiken, gebruik de stubrunner
+    testCompile('org.springframework.cloud:spring-cloud-starter-contract-stub-runner')
 }
 
 dependencyManagement {
